@@ -3,6 +3,9 @@ document.getElementById("roll").style.cursor = "grab";
 // Roll The Dice Button event
 
 document.getElementById("roll").addEventListener("click",function(){    
+    document.getElementById("member-1").style.color = "white";
+    document.getElementById("member-2").style.color = "white";
+    document.getElementById("member-3").style.color = "white";
 
     var mem1 = 0;
     var mem2 = 0;
@@ -21,9 +24,9 @@ document.getElementById("roll").addEventListener("click",function(){
     document.getElementById("mem-3").textContent="Score: "+mem3;
 
     if(mem1==mem2 && mem1==mem3 && mem2==mem3){
-        document.getElementById("member-1").style.background = "#05b50b";
-        document.getElementById("member-2").style.background = "#05b50b";
-        document.getElementById("member-3").style.background = "#05b50b";
+        document.getElementById("member-1").style.background = "#3f00ff";
+        document.getElementById("member-2").style.background = "#3f00ff";
+        document.getElementById("member-3").style.background = "#3f00ff";
 
         document.getElementById("winner").textContent = "Winner: Member-A,Member-B,Member-C";
     }
@@ -36,12 +39,14 @@ document.getElementById("roll").addEventListener("click",function(){
             document.getElementById("member-3").style.background = "#3f00ff";
         }
         else if(mem2>mem3){
-            document.getElementById("member-2").style.background = "#3f00ff";
+            document.getElementById("member-2").style.background = "#ccff00";
+            document.getElementById("member-2").style.color = "black";
             document.getElementById("member-3").style.background = "red";
         }
         else{
             document.getElementById("member-2").style.background = "red";
-            document.getElementById("member-3").style.background = "#3f00ff";
+            document.getElementById("member-3").style.background = "#ccff00";
+            document.getElementById("member-3").style.color = "black";
         }
     }
     else if(mem2>mem1 && mem2>mem3){
@@ -53,12 +58,14 @@ document.getElementById("roll").addEventListener("click",function(){
             document.getElementById("member-3").style.background = "#3f00ff";
         }
         else if(mem1>mem3){
-            document.getElementById("member-1").style.background = "#3f00ff";
+            document.getElementById("member-1").style.color = "black";
+            document.getElementById("member-1").style.background = "#ccff00";
             document.getElementById("member-3").style.background = "red";
         }
         else{
             document.getElementById("member-1").style.background = "red";
-            document.getElementById("member-3").style.background = "#3f00ff";
+            document.getElementById("member-3").style.background = "#ccff00";
+            document.getElementById("member-3").style.color = "black";
         }
     }
     else if(mem3>mem2 && mem3>mem1){
@@ -70,34 +77,36 @@ document.getElementById("roll").addEventListener("click",function(){
             document.getElementById("member-1").style.background = "#3f00ff";
         }
         else if(mem2>mem1){
-            document.getElementById("member-2").style.background = "#3f00ff";
+            document.getElementById("member-2").style.background = "#ccff00";
+            document.getElementById("member-2").style.color = "black";
             document.getElementById("member-1").style.background = "red";
         }
         else{
             document.getElementById("member-2").style.background = "red";
-            document.getElementById("member-1").style.background = "#3f00ff";
+            document.getElementById("member-1").style.background = "#ccff00";
+            document.getElementById("member-1").style.color = "black";
         }
     }  
     else if(mem1==mem2){
         document.getElementById("winner").textContent = "Winner: Member-A,Member-B";
         
-        document.getElementById("member-1").style.background = "#05b50b"
-        document.getElementById("member-2").style.background = "#05b50b"
-        document.getElementById("member-3").style.background = "#3f00ff"
+        document.getElementById("member-1").style.background = "#3f00ff";
+        document.getElementById("member-2").style.background = "#3f00ff";
+        document.getElementById("member-3").style.background = "red";
     }
     else if(mem2==mem3){
         document.getElementById("winner").textContent = "Winner: Member-B,Member-C";
 
-        document.getElementById("member-1").style.background = "#3f00ff"
-        document.getElementById("member-2").style.background = "#05b50b"
-        document.getElementById("member-3").style.background = "#05b50b"
+        document.getElementById("member-1").style.background = "red";
+        document.getElementById("member-2").style.background = "#3f00ff";
+        document.getElementById("member-3").style.background = "#3f00ff";
     }
     else if(mem1==mem3){
         document.getElementById("winner").textContent = "Winner: Member-A,Member-C";
 
-        document.getElementById("member-1").style.background = "#05b50b"
-        document.getElementById("member-2").style.background = "#3f00ff"
-        document.getElementById("member-3").style.background = "#05b50b"
+        document.getElementById("member-1").style.background = "#3f00ff";
+        document.getElementById("member-2").style.background = "red";
+        document.getElementById("member-3").style.background = "#3f00ff";
     }  
     
 
